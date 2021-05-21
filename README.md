@@ -29,7 +29,7 @@ Generates ticket according to provided ticket `image` template  and read data fr
 - java -classpath .:target/.:./core-3.2.0.jar:./zxing-javase.jar:./target/QRGenerator-1.0-SNAPSHOT.jar userInterface
 
 I've already customized a bit using the Ticket.png default but creating layers for the Event(left side) and Venue(right side). 
-I also added batch generation when the search field is null it will traverse the Contentants array and generate all tickets.
+I also added batch generation when the search field is null it will traverse the Contestants array and generate all tickets.
 # TODO: 
 - Setup properties or parameters for source CSV file
 - Setup properties or parameters for Ticket image file
