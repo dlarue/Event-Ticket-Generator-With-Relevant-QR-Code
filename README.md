@@ -13,11 +13,14 @@ Generates ticket according to provided ticket `image` template  and read data fr
 # UPDATE:  installation and use.
 
 ## Install, Customize and Run
+1. mvn clean compile package
+2. run: java -classpath ~/.m2/repository/com/google/zxing/core/3.4.1/core-3.4.1.jar:~/.m2/repository/com/google/zxing/javase/3.4.1/javase-3.4.1.jar:./target/QRGenerator-1.0-SNAPSHOT.jar userInterface
+# OR
 1. git clone https://github.com/dlarue/Event-Ticket-Generator-With-Relevant-QR-Code
-2. get xzing core jar( core-3.2.0.jar )
-3. get xzing client jar( zxing-javase.jar )
-4. compile/package using mvn clean;mvn compile;mvn package
-5. run: java -classpath .:target/.:./core-3.2.0.jar:./zxing-javase.jar:./target/QRGenerator-1.0-SNAPSHOT.jar userInterface
+2. get xzing core jar( core-3.4.1.jar )   wget https://repo1.maven.org/maven2/com/google/zxing/core/3.4.1/core-3.4.1.jar
+3. get xzing client jar( javase-3.4.1.jar ) wget https://repo1.maven.org/maven2/com/google/zxing/javase/3.4.1/javase-3.4.1.jar
+4. compile/package using mvn clean compile package
+5. run: java -classpath ./core-3.4.1.jar:./javase-3.4.1.jar:./target/QRGenerator-1.1-SNAPSHOT.jar userInterface
 
 ## Customize:
 - cd Event-Ticket-Generator-With-Relevant-QR-Code
