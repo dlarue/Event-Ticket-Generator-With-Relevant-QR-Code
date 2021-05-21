@@ -13,8 +13,8 @@ Generates ticket according to provided ticket `image` template  and read data fr
 # UPDATE:  installation and use.
 
 ## Install, Customize and Run
-1 git clone https://github.com/dlarue/Event-Ticket-Generator-With-Relevant-QR-Code
-2 get xzing core jar( core-3.2.0.jar )
+-1 git clone https://github.com/dlarue/Event-Ticket-Generator-With-Relevant-QR-Code
+-2 get xzing core jar( core-3.2.0.jar )
 3 get xzing client jar( zxing-javase.jar )
 4 compile/package using mvn clean;mvn compile;mvn package
 5 run: java -classpath .:target/.:./core-3.2.0.jar:./zxing-javase.jar:./target/QRGenerator-1.0-SNAPSHOT.jar userInterface
