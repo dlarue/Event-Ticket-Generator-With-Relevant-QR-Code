@@ -1,0 +1,4 @@
+Timestamp,Student ID,Name,Batch,Category,Access,Generic1,Generic2,Generic3
+5/21/2021 8:46:00,123456,Last1 First1,100,Staff,"All Access",generic1,generic2,generic3
+5/22/2021 13:46:00,123457,Last2 First2,101,Organizer,"Limited Access",generic1,generic2,generic3
+5/22/2021 12:46:00,123458,Last3 First3,102,Attendee,"Field only",generic1,generic2,generic3

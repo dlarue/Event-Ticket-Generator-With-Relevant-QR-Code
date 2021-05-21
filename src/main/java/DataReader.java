@@ -18,9 +18,9 @@ public class DataReader {
 
         contestants = new ArrayList();
         try {
-            URL url = new URL("https://docs.google.com/spreadsheets/d/1iXAxOUPFj2UvpHf6FHf-32HqOr4Hs8fNPFMqTxcGu0M/edit?usp=sharing");
+           // URL url = new URL("https://docs.google.com/spreadsheets/d/1iXAxOUPFj2UvpHf6FHf-32HqOr4Hs8fNPFMqTxcGu0M/edit?usp=sharing");
            // BufferedReader input = new BufferedReader(new InputStreamReader(url.openStream()));
-            RandomAccessFile input = new RandomAccessFile("/home/reckless/Documents/SEU Intra-University Programming Contest 2019 Participation Form.csv", "r");
+            RandomAccessFile input = new RandomAccessFile("./default.csv", "r");
             //RandomAccessFile input = new RandomAccessFile("SEU Intra-University Programming Contest 2019.csv", "r");
             String element;
             boolean first = true;

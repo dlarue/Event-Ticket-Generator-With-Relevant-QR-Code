@@ -27,12 +27,12 @@ public class TicketMaker {
     }
 
     void doIt(Contestant contestant) {
-        String text = "SEU Intra-Uni Programming Contest2K19.";
+        String text = "YOUR EVENT Name goes here.";
 
         try {
 
-//            BufferedImage img = ImageIO.read(new File("/home/reckless/Downloads/Test/TicketM.png"));
-            BufferedImage img = ImageIO.read(new File("Ticket.png"));
+//            BufferedImage img = ImageIO.read(new File("./Downloads/Test/TicketM.png"));
+            BufferedImage img = ImageIO.read(new File("./Ticket.png"));
             byte[] qrCodeImageArray = QRCodeGenerator.getQRCodeImageArray(contestant.toString());
             BufferedImage qr = createImageFromBytes(qrCodeImageArray);
 
@@ -67,7 +67,7 @@ public class TicketMaker {
             g2d.drawString(contestant.getCatagory(), 1550, 1400);
             g2d.dispose();
 
-            File file = new File("/home/reckless/Downloads/Test/" + contestant.getId());
+            File file = new File("./Tickets/" + contestant.getId() + ".png");
             ImageIO.write(bufferedImage, "png", file);
         } catch (IOException ex) {
             Logger.getLogger(TicketMaker.class.getName()).log(Level.SEVERE, null, ex);
