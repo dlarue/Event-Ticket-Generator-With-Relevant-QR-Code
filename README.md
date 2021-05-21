@@ -14,7 +14,7 @@ Generates ticket according to provided ticket `image` template  and read data fr
 
 ## Install, Customize and Run
 1. mvn clean compile package
-2. run: java -classpath ~/.m2/repository/com/google/zxing/core/3.4.1/core-3.4.1.jar:~/.m2/repository/com/google/zxing/javase/3.4.1/javase-3.4.1.jar:./target/QRGenerator-1.0-SNAPSHOT.jar userInterface
+2. run: java -classpath ~/.m2/repository/com/google/zxing/core/3.4.1/core-3.4.1.jar:~/.m2/repository/com/google/zxing/javase/3.4.1/javase-3.4.1.jar:./target/QRGenerator-1.1-SNAPSHOT.jar userInterface
 # OR
 1. git clone https://github.com/dlarue/Event-Ticket-Generator-With-Relevant-QR-Code
 2. get xzing core jar( core-3.4.1.jar )   wget https://repo1.maven.org/maven2/com/google/zxing/core/3.4.1/core-3.4.1.jar
@@ -29,7 +29,7 @@ Generates ticket according to provided ticket `image` template  and read data fr
 - edit default.csv file to your liking and place it in your new "Downloads/Test" directory.
 
 ## Run:
-- java -classpath .:target/.:./core-3.2.0.jar:./zxing-javase.jar:./target/QRGenerator-1.0-SNAPSHOT.jar userInterface
+- java -classpath ~/.m2/repository/com/google/zxing/core/3.4.1/core-3.4.1.jar:~/.m2/repository/com/google/zxing/javase/3.4.1/javase-3.4.1.jar:./target/QRGenerator-1.1-SNAPSHOT.jar userInterface
 
 I've already customized a bit using the Ticket.png default but creating layers for the Event(left side) and Venue(right side). 
 I also added batch generation when the search field is null it will traverse the Contestants array and generate all tickets.
