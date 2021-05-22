@@ -14,26 +14,33 @@ Generates ticket according to provided ticket `image` template  and read data fr
 
 ## Install, Customize and Run
 1. mvn clean compile package
-2. run: java -classpath ~/.m2/repository/com/google/zxing/core/3.4.1/core-3.4.1.jar:~/.m2/repository/com/google/zxing/javase/3.4.1/javase-3.4.1.jar:./target/QRGenerator-1.1-SNAPSHOT.jar userInterface
+2. run install.sh it is a simple script which creates an install directory and copies needed files to run from that directory
+3. run: java -classpath ./lib/core-3.4.1.jar:./lib/javase-3.4.1.jar:./QRGenerator-1.1-SNAPSHOT.jar userInterface
 # OR
 1. git clone https://github.com/dlarue/Event-Ticket-Generator-With-Relevant-QR-Code
 2. get xzing core jar( core-3.4.1.jar )   wget https://repo1.maven.org/maven2/com/google/zxing/core/3.4.1/core-3.4.1.jar
 3. get xzing client jar( javase-3.4.1.jar ) wget https://repo1.maven.org/maven2/com/google/zxing/javase/3.4.1/javase-3.4.1.jar
 4. compile/package using mvn clean compile package
-5. run: java -classpath ./core-3.4.1.jar:./javase-3.4.1.jar:./target/QRGenerator-1.1-SNAPSHOT.jar userInterface
+5. run: java -classpath ./lib/core-3.4.1.jar:./lib/javase-3.4.1.jar:./target/QRGenerator-1.1-SNAPSHOT.jar userInterface
+# OR
+1. run: buildAll.sh 
+2. run: java -classpath ./lib/core-3.4.1.jar:./lib/javase-3.4.1.jar:./target/QRGenerator-1.1-SNAPSHOT.jar userInterface
 
 ## Customize:
 - cd Event-Ticket-Generator-With-Relevant-QR-Code
-- change all references to Downloads/Test directories to your preferred directories
-- edit Ticket.xcf to your liking and export to Ticket.png and place it in your new "Downloads/Test" directory.
-- edit default.csv file to your liking and place it in your new "Downloads/Test" directory.
+- edit with GIMP(free open source graphic editor) Ticket.xcf to your liking and export to Ticket.png and place it in your install directory.
+- edit default.csv file to your liking and place it in your install directory. note: no null fields are allowed
 
 ## Run:
-- java -classpath ~/.m2/repository/com/google/zxing/core/3.4.1/core-3.4.1.jar:~/.m2/repository/com/google/zxing/javase/3.4.1/javase-3.4.1.jar:./target/QRGenerator-1.1-SNAPSHOT.jar userInterface
+- java -classpath ./lib/core-3.4.1.jar:./lib/javase-3.4.1.jar:./target/QRGenerator-1.1-SNAPSHOT.jar userInterface
+#OR
+- java -classpath ./lib/core-3.4.1.jar:./lib/javase-3.4.1.jar:./QRGenerator-1.1-SNAPSHOT.jar userInterface
 
-I've already customized a bit using the Ticket.png default but creating layers for the Event(left side) and Venue(right side). 
-I also added batch generation when the search field is null it will traverse the Contestants array and generate all tickets.
-# TODO: 
+## USAGE:
+Search for a UerID number and print a ticket for that user.  For batch mode which prints all entries in the database/CSV file you
+leave the search field blank and hit the generate button.  All tickets show up in the Tickets directory.
+
+## TODO: 
 - Setup properties or parameters for source CSV file
 - Setup properties or parameters for Ticket image file
 - Setup properties or parameters for destination Ticket images
