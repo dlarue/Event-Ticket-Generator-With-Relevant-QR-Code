@@ -22,4 +22,4 @@ mvn install:install-file -Dfile=./lib/core-3.4.1.jar \
     package
 #mvn package
 
-echo "java -classpath ./lib/core-3.4.1.jar:./lib/javase-3.4.1.jar:./QRGenerator.0-SNAPSHOT.jar userInterface"
+echo "java -classpath ./lib/core-3.4.1.jar:./lib/javase-3.4.1.jar:./QRGenerator-1.1-SNAPSHOT.jar userInterface"

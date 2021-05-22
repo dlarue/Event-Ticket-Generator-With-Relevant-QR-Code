@@ -229,7 +229,14 @@ public class userInterface extends javax.swing.JFrame {
 
     private void generateInfo(java.awt.event.ActionEvent evt) {
         TicketMaker ticketMaker = new TicketMaker();
-        ticketMaker.doIt(contestant);
+	if ( contestant == null ) {
+            contestant = null;
+            for(Contestant con: contestants){
+                ticketMaker.doIt(con);
+	    }
+	}
+	else
+            ticketMaker.doIt(contestant);
     }
 
     private void gIdActionPerformed(java.awt.event.ActionEvent evt) {
